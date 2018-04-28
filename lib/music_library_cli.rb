@@ -82,7 +82,7 @@ class MusicLibraryController
     song_index = gets.strip.to_i - 1
     l = Song.all.sort_by{|song| song.name}
     if song_index.between?(0, l.size-1)
-      song = l[song_index] if song_number.is_a? Integer
+      song = l[song_index] if song_index.is_a? Integer
       puts "Playing #{song.name} by #{song.artist.name}" if song
     end
   end
