@@ -16,6 +16,17 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip until input == "exit"
+    if input == "list songs"
+      list_songs
+    elsif input == "list artists"
+      list_artists
+    elsif input == "list genres"
+      list_genres
+    elsif input == "list artist"
+      list_songs_by_artist
+    elsif input == "list genre"
+      list_songs_by_genre
+    end
     # case input
     # when "list songs"
     #   list_songs
