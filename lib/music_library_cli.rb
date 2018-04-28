@@ -70,7 +70,6 @@ class MusicLibraryController
     song_name = gets.strip
     song = Song.find_by_name(song_name)
     puts "Playing #{song.name} by #{song.artist.name}"
-
   end
 
 end
