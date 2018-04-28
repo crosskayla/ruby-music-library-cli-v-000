@@ -37,7 +37,7 @@ class MusicLibraryController
   end
 
   def sort_name(class_name)
-    l = class_name.all.sort_by{|song| song.name}
+    class_name.all.sort_by{|song| song.name}
   end
 
   def list_songs
