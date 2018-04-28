@@ -81,7 +81,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song_number = gets.strip
     l = Song.all.sort_by{|song| song.name}
-    song = l[song_number-1] if song_number.is_a? Integer
+    song = l[song_number-1] if song_number
     puts "Playing #{song.name} by #{song.artist.name}" if song
     binding.pry
   end
