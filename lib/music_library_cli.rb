@@ -49,8 +49,8 @@ class MusicLibraryController
 
 # TODO // list_artists and list_genres repeat above code
 
-def print_list(a, class_name)
-  sort_by_name(class_name)
+def print_list(class_name)
+  a = sort_by_name(class_name)
   a.each_with_index do |item, index|
     puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
     puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}" if class_name == Song
@@ -58,13 +58,11 @@ def print_list(a, class_name)
 end
 
   def list_artists
-    l = sort_by_name(Artist)
-    print_list(l, )
+    print_list(Artist)
   end
 
   def list_genres
-    l = sort_by_name(Genre)
-    print_list(l, 1)
+    print_list(Genre)
   end
 
   def list_songs_by_artist
