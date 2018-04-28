@@ -28,6 +28,7 @@ class MusicLibraryController
     when "list genre"
       list_songs_by_genre
     end
+    binding.pry
   end
 
   def list_songs
