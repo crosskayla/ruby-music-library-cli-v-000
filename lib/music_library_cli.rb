@@ -40,19 +40,17 @@ class MusicLibraryController
     class_name.all.sort_by{|obj| obj.name}
   end
 
+  def print_list(class_name)
+    a = sort_by_name(class_name)
+    a.each_with_index do |item, index|
+      puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
+      puts "#{index+1}. #{item.artist.name} - #{item.name} - #{item.genre.name}" if class_name == Song
+    end
+  end
+
   def list_songs
     print_list(Song)
   end
-
-# TODO // list_artists and list_genres repeat above code
-
-def print_list(class_name)
-  a = sort_by_name(class_name)
-  a.each_with_index do |item, index|
-    puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
-    puts "#{index+1}. #{item.artist.name} - #{item.name} - #{item.genre.name}" if class_name == Song
-  end
-end
 
   def list_artists
     print_list(Artist)
