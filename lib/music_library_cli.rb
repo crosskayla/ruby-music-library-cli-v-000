@@ -82,6 +82,7 @@ class MusicLibraryController
     song_number = gets.strip
     song = list_songs[song_number-1] if song_number.is_a? Integer
     puts "Playing #{song.name} by #{song.artist.name}" if song
+    binding.pry
   end
 
 end
