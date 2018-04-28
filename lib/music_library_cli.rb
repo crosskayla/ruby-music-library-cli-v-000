@@ -57,9 +57,7 @@ end
 
   def list_artists
     l = sort_by_name(Artist)
-    l.each_with_index do |artist, index|
-      puts "#{index+1}. #{artist.name}"
-    end
+    print_list(a)
   end
 
   def list_genres
