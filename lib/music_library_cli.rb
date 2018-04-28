@@ -46,6 +46,7 @@ class MusicLibraryController
       puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
       puts "#{index+1}. #{item.artist.name} - #{item.name} - #{item.genre.name}" if class_name == Song
     end
+    a
   end
 
   def list_songs
