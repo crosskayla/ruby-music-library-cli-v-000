@@ -49,6 +49,12 @@ class MusicLibraryController
 
 # TODO // list_artists and list_genres repeat above code
 
+def print_list(a)
+  a.each_with_index do |item, index|
+    puts "#{index+1}. #{item.name}"
+  end
+end
+
   def list_artists
     l = sort_by_name(Artist)
     l.each_with_index do |artist, index|
