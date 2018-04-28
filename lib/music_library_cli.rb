@@ -57,7 +57,7 @@ end
 
   def list_artists
     l = sort_by_name(Artist)
-    print_list(a)
+    print_list(l)
   end
 
   def list_genres
