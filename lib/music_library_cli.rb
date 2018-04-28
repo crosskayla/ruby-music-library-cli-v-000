@@ -46,7 +46,6 @@ class MusicLibraryController
       puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
       puts "#{index+1}. #{item.artist.name} - #{item.name} - #{item.genre.name}" if class_name == Song
     end
-    a
   end
 
   def list_songs
@@ -66,7 +65,7 @@ class MusicLibraryController
     artist_name = gets.strip
     artist = Artist.find_by_name(artist_name)
     if artist
-      artist_songs = sort_by_name(Artist)
+      artist_songs = artist.songs.sort_by{|song| song.name}
       artist_songs.each_with_index do |song, index|
         puts "#{index+1}. #{song.name} - #{song.genre.name}"
       end
@@ -78,7 +77,7 @@ class MusicLibraryController
     genre_name = gets.strip
     genre = Genre.find_by_name(genre_name)
     if genre
-      genre_songs = sort_by_name(Genre)
+      genre_songs = genre.songs.sort_by{|song| song.name}
       genre_songs.each_with_index do |song, index|
         puts "#{index+1}. #{song.artist.name} - #{song.name}"
       end
