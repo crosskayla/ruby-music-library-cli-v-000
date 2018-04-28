@@ -53,7 +53,7 @@ def print_list(a, class_name)
   sort_by_name(class_name)
   a.each_with_index do |item, index|
     puts "#{index+1}. #{item.name}" if class_name == Artist || class_name == Genre
-    puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}" if class_name == Song
   end
 end
 
